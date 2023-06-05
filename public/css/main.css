@@ -1,5 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  height: 10vh;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    height: 6vh;
+  }
+}
+@media screen and (min-width: 500px) {
+  .header {
+    height: 7vh;
+  }
+}
+.header .container {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .header .container {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .container h1 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container h1 {
+    font-size: 1rem;
+  }
+}
+.header .container .search {
+  align-self: center;
+  justify-self: end;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .header .container .search {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: 0.3em;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .container .search input {
+    width: 100%;
+    padding: 0.4em 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: black;
+  }
+  .header .container .search i {
+    color: black;
+    padding: 0 0.4em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container .search {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3em;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 1;
+  }
+  .header .container .search input {
+    width: 100%;
+    padding: 0.4em 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+  }
+  .header .container .search i {
+    padding: 0 0.4em;
+  }
+}
+.header .container .search.show {
+  transform: translateY(110%);
+  opacity: 1;
+}
+.header .container .dropdown-links {
+  align-self: center;
+  justify-self: end;
+  display: flex;
+  position: relative;
+}
+.header .container .dropdown-links .dropdown-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .container .dropdown-links .dropdown-link .search-icon {
+  cursor: pointer;
+}
+.header .container .dropdown-links .dropdown-link .search-icon i {
+  font-size: 0.7rem;
+}
+@media screen and (min-width: 500px) {
+  .header .container .dropdown-links .dropdown-link .search-icon i {
+    display: none;
+  }
+}
+.header .container .dropdown-links .dropdown-link img {
+  margin: 0 0.4em;
+}
+@media screen and (max-width: 600px) {
+  .header .container .dropdown-links .dropdown-link img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container .dropdown-links .dropdown-link img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    font-size: 0.7rem;
+  }
+}
+.header .container .dropdown-links .dropdown-link .profile-details {
+  margin-right: 0.4em;
+}
+@media screen and (max-width: 600px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
+    font-size: 0.5rem;
+  }
+}
+.header .container .dropdown-links .dropdown-link .dropdown-icons i {
+  cursor: pointer;
+}
+.header .container .dropdown-links .links {
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 0.2em;
+  transition: all 0.5s ease-in-out;
+}
+.header .container .dropdown-links .links .link {
+  padding: 0.4em 1.5em;
+  border-radius: 0.2em;
+  transition: all 0.5s ease-in-out;
+}
+.header .container .dropdown-links .links .link:hover {
+  background-color: red;
+}
+.header .container .dropdown-links .links .link:hover a {
+  color: white;
+}
+.header .container .dropdown-links .links .link a {
+  font-size: 0.7rem;
+  color: black;
+}
+.header .container .dropdown-links .links.show {
+  transform: translateY(60%);
+  opacity: 1;
 }
