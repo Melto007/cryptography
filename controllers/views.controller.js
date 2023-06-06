@@ -7,5 +7,5 @@
  * @return view home page
  *******************************************************/
 export const homeView = (_req, res) => {
-    res.render('./pages/index')
+    res.render('./pages/login')
 }
