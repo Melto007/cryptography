@@ -15,38 +15,50 @@ a {
   text-decoration: none;
 }
 
+@media screen and (min-width: 2000px) {
+  .container-fluid {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
 .header {
   background-color: black;
   color: white;
   height: 10vh;
   position: relative;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .header {
     height: 6vh;
   }
 }
-@media screen and (min-width: 500px) {
-  .header {
-    height: 7vh;
-  }
-}
 .header .container {
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 600px) {
-  .header .container {
-    grid-template-columns: auto 1fr auto;
-  }
-}
 @media screen and (max-width: 500px) {
   .header .container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .container h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header .container h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .container h1 {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -63,17 +75,77 @@ a {
   align-self: center;
   justify-self: end;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3em;
+}
+@media screen and (min-width: 1200px) {
+  .header .container .search {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    width: 60%;
+  }
+  .header .container .search input {
+    width: 100%;
+    padding: 0.4em 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: black;
+  }
+  .header .container .search i {
+    color: black;
+    padding: 0 0.4em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header .container .search {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    width: 60%;
+  }
+  .header .container .search input {
+    width: 100%;
+    padding: 0.4em 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: black;
+  }
+  .header .container .search i {
+    color: black;
+    padding: 0 0.4em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .container .search {
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    width: 80%;
+  }
+  .header .container .search input {
+    width: 100%;
+    padding: 0.4em 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: black;
+  }
+  .header .container .search i {
+    color: black;
+    padding: 0 0.4em;
+  }
 }
 @media screen and (max-width: 600px) {
   .header .container .search {
     align-self: center;
     justify-self: center;
     background-color: white;
-    border-radius: 0.3em;
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .header .container .search input {
     width: 100%;
@@ -94,10 +166,6 @@ a {
     background-color: black;
     position: absolute;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.3em;
     transform: translateY(-100%);
     opacity: 0;
     z-index: 1;
@@ -142,12 +210,30 @@ a {
 }
 .header .container .dropdown-links .dropdown-link img {
   margin: 0 0.4em;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1200px) {
+  .header .container .dropdown-links .dropdown-link img {
+    width: 3.8em;
+    height: 3.8em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header .container .dropdown-links .dropdown-link img {
+    width: 3.8em;
+    height: 3.8em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .container .dropdown-links .dropdown-link img {
+    width: 3.5em;
+    height: 3.5em;
+  }
 }
 @media screen and (max-width: 600px) {
   .header .container .dropdown-links .dropdown-link img {
     width: 3em;
     height: 3em;
-    border-radius: 50%;
     font-size: 0.8rem;
   }
 }
@@ -155,31 +241,52 @@ a {
   .header .container .dropdown-links .dropdown-link img {
     width: 3em;
     height: 3em;
-    border-radius: 50%;
     font-size: 0.7rem;
   }
 }
 .header .container .dropdown-links .dropdown-link .profile-details {
   margin-right: 0.4em;
 }
+@media screen and (min-width: 1200px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
 @media screen and (max-width: 600px) {
   .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
     font-size: 0.7rem;
     font-weight: bold;
   }
 }
-@media screen and (max-width: 500px) {
-  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(1) {
-    font-size: 0.7rem;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 1200px) {
   .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
   .header .container .dropdown-links .dropdown-link .profile-details li:nth-child(2) {
     font-size: 0.5rem;
   }
@@ -191,7 +298,7 @@ a {
   position: absolute;
   transform: translateY(-100%);
   opacity: 0;
-  right: 0;
+  right: 2%;
   background-color: white;
   border-radius: 0.2em;
   transition: all 0.5s ease-in-out;
